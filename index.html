@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0 minimum-scale=1.0 maximum-scale=1.5">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="shortcut icon" href="/resources/favicon.ico" type="image/x-icon">
+    <meta name="keywords" content="university, ivy league, research,  transnational, land grant, new york, veterinary medicine, vet school , cornell, salmonella, craig, altier, craig altier, infection, csrb, genetics, microbiology, phd">
+    <title>Altier Lab | Cornell University</title>
+    <link rel="stylesheet" href="./stylesheet.css">
+</head>
+<body>
+    <nav class="navbar" >
+        <div class="nav-logo-box">
+            <img src="/resources/main-logo.png" alt="Craig Altier Lab Logo" class="nav-logo-img" draggable="false">
+            <div class="nav-logo-text">
+                <span class="nav-logo-text--1">
+                    Altier Lab                  
+                </span>
+                <span class="nav-logo-text--2">
+                    Cornell School of veterianry medicine                  
+                </span>
+            </div>
+        </div>
+            <!-- for the clickable hamburger icon from small to large screen-->
+        <label class="navbar-hamburger" oncontextmenu="return false">     
+            <span class="hamburger-icon">&nbsp;</span>
+            <input type="button" id="hamburger">
+        </label>
+
+            <!--  the toggleable list -->
+        <ul id="nav-menu" class='hide-menu'>
+            <li class="nav-list-item"><a class="nav-list-link active" href="#">Home</a></li>
+            <li class="nav-list-item"><a class="nav-list-link" href="research.html">Research</a></li>
+            <li class="nav-list-item"><a class="nav-list-link" href="#">Team</a></li>
+            <li class="nav-list-item"><a class="nav-list-link" href="publication.html">Publication</a></li>
+            <li class="nav-list-item"><a class="nav-list-link" href="#">Gallery</a></li>
+            <li class="nav-list-item"><a class="nav-list-link" href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- end of the nav section  -->
+    <!-- beginning of the header section -->
+    
+    <header class="main-header">
+        <div class="main-header-img">
+            <img alt="Cornell University" id="carousel" src="./resources/hero.jpg">
+        </div>
+        <div class="main-header-text-box">
+            <h1 class="header-h1">
+                Altier Lab
+            </h1>
+            <h2 class="header-h2">
+                Salmonella Pathogenesis
+            </h2>
+        </div>
+        
+    </header>
+    <main class="main-body">
+        <div class="main-body-text-box">
+            <h1 class="header-h1">
+                About us
+            </h1>
+            <h3 class="header-h3">
+                We are <span class="italics">Salmonella</span> Infection Biologists
+            </h3>
+            <a href="#" class="btn btn-main">Learn More</a>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-text">
+            <span class="footer-line">Craig Altier DVM, PhD</span>
+            <span class="footer-line">Department of Population Medicine and Diagnostic Sciences</span>
+            <span class="footer-line">Cornell University College of Veterinary Medicine</span>
+            <span class="footer-line">Ithaca, NY 14853</span>
+            <span class="footer-line">
+                icon icon
+            </span>
+        </div>
+    </footer>
+
+
+   <script src="script.js"></script>
+   <script>
+        function slideShow(){
+        let index = 0;
+        const imageArray = ["./resources/hero.jpg","./resources/hero-2.jpg","./resources/hero-3.jpg"];
+        const imageCarousel = document.getElementById('carousel');
+            setInterval(()=>{
+                imageCarousel.setAttribute('src',imageArray[index % 3]);
+                index++;
+            },4000);
+        }
+        document.addEventListener('DOMContentLoaded', ()=>{
+            slideShow();
+            if(window.innerWidth >= 960){
+                document.getElementById('nav-menu').classList.remove('hide-menu');
+
+            }
+        });
+   </script>
+</body>
+</html>
